@@ -43,7 +43,6 @@ The first time you run the program, it will provide you with a URL to copy and p
 
 The program will store your credentials in the cache for future use, so you won't need to repeat this process every time.
 
-```
 ### Folder structure
 All URIs/URLs will be organized into specific folders based on their type:
 
