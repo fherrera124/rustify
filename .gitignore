@@ -1,0 +1,8 @@
+/tracks
+/playlists
+/albums
+/episodes
+/shows
+/.cache
+Cargo.lock
+/target

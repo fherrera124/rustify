@@ -1,0 +1,22 @@
+[package]
+name = "oggify"
+version = "0.1.0"
+authors = ["Francisco Herrera <okkk@gmail.com>"]
+edition = "2021"
+license = "MIT"
+description = "Download Spotify tracks with a Premium account"
+keywords = ["spotify"]
+repository = "https://github.com/fherrera124/docker-oggify"
+readme = "README.md"
+
+[dependencies]
+env_logger = "0.11.6"
+librespot-core = "0.6.0"
+librespot-metadata = "0.6.0"
+librespot-audio = "0.6.0"
+librespot-oauth = "0.6.0"
+log = "0.4.20"
+regex = "1.9"
+sanitize-filename = "0.6.0"
+tokio = { version = "1.40", features = ["full"] }
+futures-util = { version = "0.3", default-features = false }
