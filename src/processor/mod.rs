@@ -172,10 +172,10 @@ impl ItemsProcessor {
         dir_path: &PathBuf,
     ) -> Result<(), Error> {
         let track_data = self.track_loader.load_track(*spotify_id).await?;
-        let (audio_item, audio_buffer, format) = (
+        let (audio_item, audio_buffer, audio_format) = (
             track_data.audio_item,
             track_data.audio_buffer,
-            track_data.audio_file_format,
+            track_data.audio_format,
         );
 
         let (origins, group_name) = match &audio_item.unique_fields {
@@ -200,7 +200,7 @@ impl ItemsProcessor {
             .trim()
             .to_string();
 
-        let extension = match format {
+        let extension = match audio_format {
             f if AudioFiles::is_ogg_vorbis(f) => "ogg",
             f if AudioFiles::is_mp3(f) => "mp3",
             f if AudioFiles::is_flac(f) => "flac",

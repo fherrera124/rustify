@@ -10,7 +10,7 @@ pub struct TrackLoader {
 pub struct LoadedTrackData {
     pub audio_item: AudioItem,
     pub audio_buffer: Vec<u8>,
-    pub audio_file_format: AudioFileFormat,
+    pub audio_format: AudioFileFormat,
 }
 
 impl TrackLoader {
@@ -167,7 +167,7 @@ impl TrackLoader {
         return Ok(LoadedTrackData {
             audio_item,
             audio_buffer: decrypted_buffer,
-            audio_file_format: format,
+            audio_format: format,
         });
     }
 }
